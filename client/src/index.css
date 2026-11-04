@@ -1,0 +1,116 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.75rem;
+  --brand: #176b63;
+  --canvas: #f7f7f3;
+  --background: oklch(0.985 0.005 95);
+  --foreground: oklch(0.22 0.018 180);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.018 180);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.018 180);
+  --primary: #176b63;
+  --primary-foreground: #f4fbf9;
+  --secondary: oklch(0.96 0.009 165);
+  --secondary-foreground: oklch(0.3 0.035 175);
+  --muted: oklch(0.965 0.006 95);
+  --muted-foreground: oklch(0.5 0.017 180);
+  --accent: oklch(0.95 0.015 165);
+  --accent-foreground: oklch(0.27 0.04 175);
+  --destructive: oklch(0.56 0.22 25);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.9 0.009 175);
+  --input: oklch(0.9 0.009 175);
+  --ring: #176b63;
+  --sidebar: oklch(0.99 0.004 95);
+  --sidebar-foreground: oklch(0.22 0.018 180);
+  --sidebar-primary: #176b63;
+  --sidebar-primary-foreground: #f4fbf9;
+  --sidebar-accent: oklch(0.95 0.015 165);
+  --sidebar-border: oklch(0.9 0.009 175);
+  --sidebar-ring: #176b63;
+  --chart-1: #176b63;
+  --chart-2: #c9872d;
+  --chart-3: #507f91;
+  --chart-4: #a85f58;
+  --chart-5: #6e7d62;
+}
+
+.dark {
+  --background: oklch(0.17 0.01 180);
+  --foreground: oklch(0.93 0.008 95);
+  --card: oklch(0.21 0.012 180);
+  --card-foreground: oklch(0.93 0.008 95);
+  --popover: oklch(0.21 0.012 180);
+  --popover-foreground: oklch(0.93 0.008 95);
+  --primary: #58a99c;
+  --primary-foreground: oklch(0.18 0.015 180);
+  --secondary: oklch(0.25 0.015 180);
+  --secondary-foreground: oklch(0.9 0.008 95);
+  --muted: oklch(0.25 0.015 180);
+  --muted-foreground: oklch(0.7 0.015 180);
+  --accent: oklch(0.28 0.02 180);
+  --accent-foreground: oklch(0.93 0.008 95);
+  --destructive: oklch(0.65 0.18 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: #58a99c;
+  --sidebar: oklch(0.2 0.012 180);
+  --sidebar-foreground: oklch(0.93 0.008 95);
+  --sidebar-primary: #58a99c;
+  --sidebar-primary-foreground: oklch(0.18 0.015 180);
+  --sidebar-accent: oklch(0.28 0.02 180);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: #58a99c;
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  html { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  body { @apply bg-background text-foreground; min-width: 320px; }
+  button:not(:disabled), [role="button"]:not([aria-disabled="true"]), a[href], select:not(:disabled), input[type="checkbox"]:not(:disabled) { @apply cursor-pointer; }
+  :focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+}

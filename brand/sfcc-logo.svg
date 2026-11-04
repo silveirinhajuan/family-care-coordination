@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="88" viewBox="0 0 320 88" role="img" aria-labelledby="title desc">
+  <title id="title">SFCC</title>
+  <desc id="desc">Símbolo de dois segmentos de uma escala familiar que se encontram em uma passagem, seguido pelo nome SFCC.</desc>
+  <rect width="320" height="88" rx="22" fill="#F7F7F2"/>
+  <g transform="translate(18 18)" fill="none" stroke="#176B63" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 33h19c7 0 12-5 12-12S41 9 48 9h19" stroke-width="5"/>
+    <circle cx="5" cy="33" r="4.5" fill="#176B63" stroke="none"/>
+    <circle cx="67" cy="9" r="4.5" fill="#176B63" stroke="none"/>
+    <path d="M14 10h10M48 45h11" stroke-width="3.5" opacity=".6"/>
+  </g>
+  <text x="111" y="57" fill="#153D39" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="34" font-weight="750" letter-spacing="1.5">SFCC</text>
+</svg>
